@@ -1,0 +1,21 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:task="http://www.springframework.org/schema/task"
+       xmlns:beans="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-3.0.xsd">
+
+<beans:bean id="schedulingTest" class="com.schedule.ScheduleSayHello" />
+
+<task:scheduled-tasks>
+    <task:scheduled ref="schedulingTest" method="sayHello" cron="0/15 1-59 0-23 * * ?"/>
+</task:scheduled-tasks>
+
+    <!-- 每天24点，刷新账户登录重试次数-->
+
+    <!-- 每3分钟，检视定时锁定的账户，时间到了就解锁 -->
+
+    <!-- 每1个月，检视所有非过期账户，半年未登录，则过期-->
+
+    <!-- 每1个月，检视所有过期账户，一年未登录，则注销-->
+</beans>
