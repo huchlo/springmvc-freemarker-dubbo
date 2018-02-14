@@ -43,7 +43,7 @@ http://www.springframework.org/schema/mvc/spring-mvc.xsd">
     <bean id="conversionService" class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
     </bean>
 
-    <mvc:resources mapping="/resources/**" location="/resources/" />
+    <!--<mvc:resources mapping="/resources/**" location="/resources/" />-->
 
     <import resource="controllers.xml" />
     <import resource="application-context.xml" />

@@ -5,11 +5,11 @@
 
 
 
-	<bean id="csrfFilter" class="org.springframework.security.web.csrf.CsrfFilter">
+<!--	<bean id="csrfFilter" class="org.springframework.security.web.csrf.CsrfFilter">
 		<constructor-arg>
 			<bean class="org.springframework.security.web.csrf.HttpSessionCsrfTokenRepository"/>
 		</constructor-arg>
-	</bean>
+	</bean>-->
 
 	<bean id="requestDataValueProcessor" class="org.springframework.security.web.servlet.support.csrf.CsrfRequestDataValueProcessor"/>
 
@@ -30,5 +30,5 @@
 	</bean>
 
 	<!-- 加载doubbo配置文件-->
-	<import resource="classpath*:doubbo-api.xml"/>
+	<!--<import resource="classpath*:doubbo-api.xml"/>-->
 </beans>
